@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.airbnb.android:lottie:3.4.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lottie-3.4.1.aar/b544d92df3a5921e43b39786e3ca9aa9/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lottie-3.4.1.aar/b544d92df3a5921e43b39786e3ca9aa9/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lottie-3.4.1.aar/b544d92df3a5921e43b39786e3ca9aa9/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lottie-3.4.1.aar/b544d92df3a5921e43b39786e3ca9aa9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/modules-2/files-2.1/com.airbnb.android/lottie/3.4.1/5083f3e4cd203a9412213be75d58b4976f7f4966/lottie-3.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

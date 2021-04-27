@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.transition:transition:1.2.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/1831d1c10c229ea6645e4f8b7c3aee2b/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/3a391c6173d8d3040253d90abc0af9c8/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/1831d1c10c229ea6645e4f8b7c3aee2b/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/1831d1c10c229ea6645e4f8b7c3aee2b/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/3a391c6173d8d3040253d90abc0af9c8/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/3a391c6173d8d3040253d90abc0af9c8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/transition-1.2.0.aar/3a391c6173d8d3040253d90abc0af9c8/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

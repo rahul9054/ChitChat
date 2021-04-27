@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.material:material:1.1.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/64726d100c03e4b46ea843d60296ca9c/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/52bc2a705f9210382c564a220670c163/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/64726d100c03e4b46ea843d60296ca9c/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/64726d100c03e4b46ea843d60296ca9c/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/52bc2a705f9210382c564a220670c163/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/52bc2a705f9210382c564a220670c163/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/material-1.1.0.aar/52bc2a705f9210382c564a220670c163/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

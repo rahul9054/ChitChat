@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.drawerlayout:drawerlayout:1.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/a63e065ab8942436feff4c43eb94a5ca/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/78dc1e194fb086672190a71114b00309/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/a63e065ab8942436feff4c43eb94a5ca/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/a63e065ab8942436feff4c43eb94a5ca/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/78dc1e194fb086672190a71114b00309/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/78dc1e194fb086672190a71114b00309/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/78dc1e194fb086672190a71114b00309/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

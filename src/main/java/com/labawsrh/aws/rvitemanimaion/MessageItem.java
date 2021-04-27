@@ -2,50 +2,64 @@ package com.labawsrh.aws.rvitemanimaion;
 
 public class MessageItem {
 
+    public String getSender() {
+        return sender;
+    }
 
-    String Title,Content,Date;
-    int userPhoto;
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    String sender ;
 
     public MessageItem() {
     }
 
+    String message;
 
-    public MessageItem(String title, String content, String date, int userPhoto) {
-        Title = title;
-        Content = content;
-        Date = date;
-        this.userPhoto = userPhoto;
+    public MessageItem(String senders_name, String message, String type, long timestamp, boolean seen) {
+        this.sender = senders_name;
+        this.message = message;
+        this.type = type;
+        this.timestamp = timestamp;
+        this.seen = seen;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    String type;
+
+    public String getMessage() {
+        return message;
     }
 
-    public void setContent(String content) {
-        Content = content;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public void setDate(String date) {
-        Date = date;
+    public String getType() {
+        return type;
     }
 
-    public void setUserPhoto(int userPhoto) {
-        this.userPhoto = userPhoto;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getTitle() {
-        return Title;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    public String getContent() {
-        return Content;
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
-    public String getDate() {
-        return Date;
+    public boolean isSeen() {
+        return seen;
     }
 
-    public int getUserPhoto() {
-        return userPhoto;
+    public void setSeen(boolean seen) {
+        this.seen = seen;
     }
+
+    long  timestamp ;
+    boolean seen ;
+
 }

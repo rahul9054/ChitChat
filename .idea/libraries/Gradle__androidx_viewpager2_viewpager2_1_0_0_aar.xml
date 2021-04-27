@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/daf010dfb2c65b028a1c8c160d2fe045/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/547fd702154b2d8e70bc782509ae67e2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/daf010dfb2c65b028a1c8c160d2fe045/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/daf010dfb2c65b028a1c8c160d2fe045/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/547fd702154b2d8e70bc782509ae67e2/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/547fd702154b2d8e70bc782509ae67e2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/viewpager2-1.0.0.aar/547fd702154b2d8e70bc782509ae67e2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

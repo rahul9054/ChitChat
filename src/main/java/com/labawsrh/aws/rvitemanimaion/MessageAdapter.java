@@ -1,170 +1,224 @@
 package com.labawsrh.aws.rvitemanimaion;
 
 import android.content.Context;
+import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.Filter;
-import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.utils.Utils;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
-public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.NewsViewHolder> implements Filterable {
+public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.NewsViewHolder> {
 
 
+    public List<MessageItem> list = new ArrayList<>();
     Context mContext;
-    List<MessageItem> mData;
-    List<MessageItem> mDataFiltered;
-    boolean isDark = false;
+
+    String user_id;
+    // TextView seen;
+    private ValueEventListener valueEventListener;
+    int i = 0;
 
 
-    public MessageAdapter(Context mContext, List<MessageItem> mData, boolean isDark) {
+    public MessageAdapter(Context mContext, String user_id) {
         this.mContext = mContext;
-        this.mData = mData;
-        this.isDark = isDark;
-        this.mDataFiltered = mData;
+        this.user_id = user_id;
     }
 
-    public MessageAdapter(Context mContext, List<MessageItem> mData) {
-        this.mContext = mContext;
-        this.mData = mData;
-        this.mDataFiltered = mData;
-
-    }
 
     @NonNull
     @Override
     public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
+        if (i == 0) {
 
-        View layout;
-        layout = LayoutInflater.from(mContext).inflate(R.layout.item_message_sender, viewGroup, false);
-        return new NewsViewHolder(layout);
+            View layout;
+            layout = LayoutInflater.from(mContext).inflate(R.layout.item_message_sender, viewGroup, false);
+            return new NewsViewHolder(layout);
+        } else {
+            View layout;
+            layout = LayoutInflater.from(mContext).inflate(R.layout.item_message_receiver_one_to_one, viewGroup, false);
+            return new NewsViewHolder(layout);
+
+        }
     }
 
     @Override
     public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, int position) {
+        int i = list.size() - 1;
+        Log.e("seen", i + " - " + position + " , " + list.size() + "  ,  " + list.get(position).getMessage());
 
-        // bind data here
 
-        // we apply animation to views here
-        // first lets create an animation for user photo
-        if (position % 2 == 0) {
-            newsViewHolder.img_user.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_transition_animation));
+        if (position == list.size() - 1 && list.get(position).getSender().equals(User_Details.user_name)) {
 
-            // lets create the animation for the whole card
-            // first lets create a reference to it
-            // you ca use the previous same animation like the following
+            Log.e("seen ekk barrr plzzzzz", position + "  ");
 
-            // but i want to use a different one so lets create it ..
-            newsViewHolder.container.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation));
+            show_seen(user_id, newsViewHolder.seen, position);
+
+//                newsViewHolder.seen.setText("seen");
+//            } else {
+//                newsViewHolder.seen.setText("Delivered");
+//            }
+
+            // newsViewHolder.container.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation));
+
+
         } else {
-            newsViewHolder.img_user.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_transition_sender));
 
-            // lets create the animation for the whole card
-            // first lets create a reference to it
-            // you ca use the previous same animation like the following
+            newsViewHolder.seen.setVisibility(View.INVISIBLE);
 
-            // but i want to use a different one so lets create it ..
-            newsViewHolder.container.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation_sender));
+            //  newsViewHolder.container.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation_sender));
         }
 
 
-        newsViewHolder.tv_title.setText(mDataFiltered.get(position).getTitle());
-        newsViewHolder.tv_content.setText(mDataFiltered.get(position).getContent());
-        newsViewHolder.tv_date.setText(mDataFiltered.get(position).getDate());
-        newsViewHolder.img_user.setImageResource(mDataFiltered.get(position).getUserPhoto());
+        newsViewHolder.message.setText(list.get(position).message);
+
+        long previousTs = 0;
+        if (position > 0) {
+            MessageItem pm = list.get(position - 1);
+            previousTs = pm.getTimestamp();
+        }
+
+        setTimeTextVisibility(list.get(position).getTimestamp(), previousTs, newsViewHolder.time_text);
 
 
+    }
+
+    public String getFormattedDate(Context context, long smsTimeInMilis) {
+        Calendar smsTime = Calendar.getInstance();
+        smsTime.setTimeInMillis(smsTimeInMilis);
+
+        Calendar now = Calendar.getInstance();
+
+        final String timeFormatString = "h:mm aa";
+        final String dateTimeFormatString = "EEEE, MMMM d";
+        final long HOURS = 60 * 60 * 60;
+        if (now.get(Calendar.DATE) == smsTime.get(Calendar.DATE)) {
+            return "Today ";
+        } else if (now.get(Calendar.DATE) - smsTime.get(Calendar.DATE) == 1) {
+            return "Yesterday ";
+        } else if (now.get(Calendar.YEAR) == smsTime.get(Calendar.YEAR)) {
+            return DateFormat.format(dateTimeFormatString, smsTime).toString();
+        } else {
+            return DateFormat.format("MMMM dd yyyy, h:mm aa", smsTime).toString();
+        }
+    }
+
+    private void setTimeTextVisibility(long ts1, long ts2, TextView timeText) {
+
+        if (ts2 == 0) {
+            timeText.setVisibility(View.VISIBLE);
+            timeText.setText(getFormattedDate(mContext, ts1));
+        } else {
+            Calendar cal1 = Calendar.getInstance();
+            Calendar cal2 = Calendar.getInstance();
+            cal1.setTimeInMillis(ts1);
+            cal2.setTimeInMillis(ts2);
+
+            boolean same = cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) &&
+                    cal1.get(Calendar.DATE) == cal2.get(Calendar.DATE);
+
+            if (same) {
+                timeText.setVisibility(View.GONE);
+                timeText.setText("");
+            } else {
+                timeText.setVisibility(View.VISIBLE);
+                timeText.setText(getFormattedDate(mContext, ts1));
+            }
+
+        }
     }
 
     @Override
     public int getItemCount() {
-        return mDataFiltered.size();
+        return list.size();
     }
+
+
+    private void show_seen(String user_id, final TextView seen, final int position) {
+        FirebaseDatabase.getInstance().getReference().child("users_chat").child(User_Details.user_name).child(user_id).limitToLast(1).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+
+                    MessageItem messageItem = dataSnapshot.getValue(MessageItem.class);
+                    Log.e(" ekk barr call - " + position, messageItem.getMessage());
+
+                    if (position == list.size() - 1) {
+                        if (messageItem.isSeen()) {
+                            seen.setVisibility(View.VISIBLE);
+                            seen.setText("Seen");
+                        } else {
+                            seen.setVisibility(View.VISIBLE);
+                            seen.setText("Delivered");
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
 
     @Override
-    public Filter getFilter() {
+    public int getItemViewType(int position) {
+        if (list.get(position) != null) {
+            // Log.e("name", list.get(position).getSender());
+            if (list.get(position).getSender().equals(User_Details.user_name)) {
+                return 0;
 
-        return new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
+            } else {
 
-                String Key = constraint.toString();
-                if (Key.isEmpty()) {
-
-                    mDataFiltered = mData;
-
-                } else {
-                    List<MessageItem> lstFiltered = new ArrayList<>();
-                    for (MessageItem row : mData) {
-
-                        if (row.getTitle().toLowerCase().contains(Key.toLowerCase())) {
-                            lstFiltered.add(row);
-                        }
-
-                    }
-
-                    mDataFiltered = lstFiltered;
-
-                }
-
-
-                FilterResults filterResults = new FilterResults();
-                filterResults.values = mDataFiltered;
-                return filterResults;
-
+                return 1;
             }
+        } else {
+            return 2;
+        }
+    }
 
-            @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-
-
-                mDataFiltered = (List<MessageItem>) results.values;
-                notifyDataSetChanged();
-
-            }
-        };
-
+    public void setData(MessageItem messageItem) {
+        // Log.e("called_3", list.size() + "");
+        list.add(messageItem);
+        notifyDataSetChanged();
 
     }
+
 
     public class NewsViewHolder extends RecyclerView.ViewHolder {
 
 
-        TextView tv_title, tv_content, tv_date;
-        ImageView img_user;
+        TextView message, date;
         RelativeLayout container;
-
+        TextView seen;
+        TextView time_text;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
             container = itemView.findViewById(R.id.container);
-            tv_title = itemView.findViewById(R.id.tv_title);
-            tv_content = itemView.findViewById(R.id.tv_description);
-            tv_date = itemView.findViewById(R.id.tv_date);
-            img_user = itemView.findViewById(R.id.img_user);
-
-
-            if (isDark) {
-                setDarkTheme();
-            }
-
-
-        }
-
-
-        private void setDarkTheme() {
-
-            container.setBackgroundResource(R.drawable.card_bg_dark);
+            message = itemView.findViewById(R.id.message);
+            seen = itemView.findViewById(R.id.seen_message);
+            time_text = itemView.findViewById(R.id.timeText);
 
         }
 

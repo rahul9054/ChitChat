@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.core:core:1.1.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/35fb2d50bbeb1797330e819f2464a3c4/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/9952660bff624a77c14c6264b5df60cf/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/35fb2d50bbeb1797330e819f2464a3c4/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/35fb2d50bbeb1797330e819f2464a3c4/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/9952660bff624a77c14c6264b5df60cf/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/9952660bff624a77c14c6264b5df60cf/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/core-1.1.0.aar/9952660bff624a77c14c6264b5df60cf/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

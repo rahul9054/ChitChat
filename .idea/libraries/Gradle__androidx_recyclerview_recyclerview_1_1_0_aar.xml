@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.recyclerview:recyclerview:1.1.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/9e953dd9d66b505e742cca4fb9f1bc70/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/7187fa790a5ea2e96b70701d9e37cc93/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/9e953dd9d66b505e742cca4fb9f1bc70/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/9e953dd9d66b505e742cca4fb9f1bc70/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/7187fa790a5ea2e96b70701d9e37cc93/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/7187fa790a5ea2e96b70701d9e37cc93/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/recyclerview-1.1.0.aar/7187fa790a5ea2e96b70701d9e37cc93/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

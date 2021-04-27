@@ -36,15 +36,16 @@
                 android:fontFamily="@font/bold"
                 android:text="Rahul khandelwal"
                 android:textColor="#fff"
-                android:textSize="15dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/level"
+                android:id="@+id/last_mssg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold"
                 android:text="Bronze"
+                android:layout_marginTop="5dp"
                 android:textColor="#fff"
                 android:textSize="10dp"
                 android:textStyle="bold" />
@@ -59,10 +60,11 @@
         android:id="@+id/cardView2"
         android:layout_width="8dp"
         android:layout_height="8dp"
+        android:visibility="invisible"
         android:layout_alignParentRight="true"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        app:cardBackgroundColor="#91E192"
+        app:cardBackgroundColor="#258bd6"
         app:cardCornerRadius="100dp" />
 
     <View

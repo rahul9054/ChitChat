@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f4960a18c4de74cdb25ddca4a8c3f863/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f55c5faf2413d105f01510411bd76bb4/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f4960a18c4de74cdb25ddca4a8c3f863/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f4960a18c4de74cdb25ddca4a8c3f863/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f55c5faf2413d105f01510411bd76bb4/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f55c5faf2413d105f01510411bd76bb4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/coordinatorlayout-1.1.0.aar/f55c5faf2413d105f01510411bd76bb4/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

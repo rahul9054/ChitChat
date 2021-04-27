@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.appcompat:appcompat-resources:1.1.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/949c2e90b767b164706532c48cb5c234/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/949c2e90b767b164706532c48cb5c234/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/b664727e1524b911aeb25ebbea10ac2d/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/b664727e1524b911aeb25ebbea10ac2d/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/b664727e1524b911aeb25ebbea10ac2d/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

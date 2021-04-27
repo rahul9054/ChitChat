@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.activity:activity:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/activity-1.0.0.aar/8375b4f457d10f367fed2b42984f03fc/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/activity-1.0.0.aar/8375b4f457d10f367fed2b42984f03fc/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/activity-1.0.0.aar/cc4c0c8cdffbb18cd8d335fa36ba7407/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/activity-1.0.0.aar/cc4c0c8cdffbb18cd8d335fa36ba7407/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/activity-1.0.0.aar/cc4c0c8cdffbb18cd8d335fa36ba7407/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

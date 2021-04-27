@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "142390813685",
+    "firebase_url": "https://ungrezi-3423b.firebaseio.com",
+    "project_id": "ungrezi-3423b",
+    "storage_bucket": "ungrezi-3423b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142390813685:android:4f5d45a9b1dea9450bb6bc",
+        "android_client_info": {
+          "package_name": "com.labawsrh.aws.rvitemanimaion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142390813685-ppjrqnjormh1vmob85p7r5ccpgbsl4e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.labawsrh.aws.rvitemanimaion",
+            "certificate_hash": "32c6e3183200e9bad57229ea3a7761d25723d78c"
+          }
+        },
+        {
+          "client_id": "142390813685-0aura753r5efrsnrh79orj2gs05p0m3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1AhRn_oZyzcTvyo9I536ZQHIeEitmVBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142390813685-0aura753r5efrsnrh79orj2gs05p0m3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

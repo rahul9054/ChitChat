@@ -1,41 +1,117 @@
 package com.labawsrh.aws.rvitemanimaion;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.appcompat.app.AppCompatActivity;
+
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.airbnb.lottie.LottieAnimationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.List;
 
-public class Users extends Fragment {
+public class Users extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    List<String> list;
-    ViewModel viewModel;
+    Model viewModel;
+    LinearLayoutManager linearLayoutManager;
+    User_Adapter Adapter;
+    List<String> users_list;
+    private ProgressBar progressBar;
+    private DatabaseReference mdatabase;
+    private LottieAnimationView animationView;
+    private Toolbar toolbar;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_search_user);
 
 
-        viewModel = ViewModelProviders.of(this).get(ViewModel.class);
-        list = viewModel.getList();
+
+        mdatabase = FirebaseDatabase.getInstance().getReference();
+        progressBar = findViewById(R.id.progressBar);
+        toolbar = findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        animationView = findViewById(R.id.animation_view);
+        // animationView.playAnimation();
 
 
-        View view = inflater.inflate(R.layout.fragment_group, container, false);
-        recyclerView = view.findViewById(R.id.rv_group);
-        GroupAdapter Adapter = new GroupAdapter(list, getContext());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        viewModel = new Model();
+
+        users_list = viewModel.getUserList();
+
+
+        recyclerView = findViewById(R.id.rv_group);
+        progressBar = findViewById(R.id.progressBar);
+        Adapter = new User_Adapter(this);
+        linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(Adapter);
 
-        return view;
+
+        Log.e("list_check_users", users_list.size() + "");
+        Adapter.load_users(users_list);
+
 
     }
+
+
+    @Override
+    public void onStart() {
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                    Adapter.notifyDataSetChanged();
+                // animationView.cancelAnimation();
+                // animationView.setVisibility(View.GONE);
+            }
+        }, 2000);
+
+
+        super.onStart();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+
+        MenuItem item = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                Adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
 }
+
+
+
+
+
+
+
+
 

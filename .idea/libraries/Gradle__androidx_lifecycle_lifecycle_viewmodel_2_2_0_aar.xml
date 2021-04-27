@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.2.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.2.0.aar/1426f18b170c4e2e91c89b51b57eddde/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.2.0.aar/1426f18b170c4e2e91c89b51b57eddde/res" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.2.0.aar/c7e7997369e6f37fb63c8abc0f3464de/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.2.0.aar/c7e7997369e6f37fb63c8abc0f3464de/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../ud845-Pets-starting-point/gradle/wrapper/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.2.0.aar/c7e7997369e6f37fb63c8abc0f3464de/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

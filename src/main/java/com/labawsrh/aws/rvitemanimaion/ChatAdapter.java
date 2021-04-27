@@ -22,9 +22,9 @@ public class ChatAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new Group();
+            return new OneToOne();
         } else {
-            return new Users();
+            return new Group();
         }
 
     }
